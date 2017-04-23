@@ -1,0 +1,6 @@
+---
+  - hosts : hosts
+    become : True
+    roles :
+      - { role : install-httpd }
+      - { role : install-php }

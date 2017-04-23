@@ -1,0 +1,5 @@
+---
+- hosts : hosts
+  become : True
+  roles :
+  - { role : install-httpd }

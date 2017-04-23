@@ -1,0 +1,6 @@
+---
+  - hosts : hosts
+    become : True
+    tasks :
+    - name : install mysql
+      yum : name=mysql state=latest
