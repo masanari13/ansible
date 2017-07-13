@@ -1,0 +1,22 @@
+---
+- name : /tmp/dir1の作成
+  hosts : hosts
+  become : true
+  tasks :
+  - name : directoryの作成
+    file :
+     path : /tmp/dir1
+     state : directory
+  - name : Link作成サンプル
+    file :
+      src : /tmp/dir1
+      dest : /tmp/link_to_dir1
+      state : link
+  - name : 権限変更
+    file :
+      path : /tmp/dir1
+      state : directory
+      recursive : true
+      owner : vagrant
+      group : vagrant
+      mode : "u=rwx,g=rx,o=rx"

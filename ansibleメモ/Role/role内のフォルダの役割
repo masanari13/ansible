@@ -1,0 +1,16 @@
+•defaults
+　　Role 内で使う変数のデフォルト値定義
+•files
+　　操作対象ホストにコピーするファイル配置用ディレクトリ
+•handlers
+　　Handlerとして使用するタスクの定義
+•meta
+　　Roleの依存関係を定義
+•tasks
+　　Roleで実行するタスクの定義
+•templates
+　　操作対象ホストに展開するJinja 2 テンプレートを配置
+•tests
+　　RoleをテストするためのPlaybook（ test.yml）とInventor 定義（ inventory）を配置
+•vars
+　　Role内で使う変数定義

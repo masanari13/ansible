@@ -1,0 +1,14 @@
+エクストラ変数とは？
+　ansibleのコマンド実行時に定義できる変数。
+　-eオプションのあとに定義し、『=』つなぎでの定義やymlファイルを読み込み定義する事ができる。
+　変数の優先順位としては、最優先される。
+
+定義方法
+1.『＝』つなぎでの定義 ※注意：この定義方法は値が全て文字列になってしまう。
+　ansible-playbook -i hosts -e ’nginx_ version = 1. 10. 2 nginx_ user = nginx’ site. yml
+
+2.json形式での定義
+　ansible-playbook -i hosts -e ’{"nginx_port":8080}’ site. yml
+
+3.yml形式で定義した変数の読み込み
+　ansible-playbook -i hosts -e '@extra-vars.yml' site. yml

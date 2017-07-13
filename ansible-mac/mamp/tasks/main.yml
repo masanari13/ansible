@@ -1,0 +1,8 @@
+---
+- name : brewのアップデート
+  homebrew :
+   update_homebrew : yes
+- name : mampのインストール
+  homebrew_cask :
+   name : mamp
+   state : installed

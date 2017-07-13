@@ -1,0 +1,10 @@
+開発　　：　Ansible社　➡︎　RedHat社 (オープンソース)
+開発言語：　Python
+役割　　：　構成管理ツール
+　※構成管理ツールのその他のソフトウェア　：Chef,Papet
+
+Ansible実行に必要な要素
+　・Ansible本体
+　・Inventoryファイル
+　・Module
+　・Playbook

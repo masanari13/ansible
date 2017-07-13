@@ -1,5 +1,5 @@
 [hosts]
-hosts host=192.168.33.11
+192.168.33.11
 
 [app]
 app1 ansible_host=192.168.33.11

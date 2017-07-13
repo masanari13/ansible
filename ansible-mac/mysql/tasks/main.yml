@@ -1,0 +1,13 @@
+---
+- name : mysqlのインストール
+  homebrew :
+    name : mysql
+    state : latest
+- name : mysql.sockの配置
+  file :
+    path : /tmp/mysql.sock
+    state : touch
+- name : phpmyadminのインストール
+  homebrew :
+    name : phpmyadmin
+    state : latest

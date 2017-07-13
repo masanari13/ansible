@@ -1,0 +1,19 @@
+- name : CentOS7上にWordpressのセットアップ
+  hosts : hosts
+  become : true
+  roles :
+    - name : common
+      tags :
+        - common
+    - name : mariadb
+      tags :
+        - mariadb
+    - name : php-fpm
+      tags :
+        - php-fpm
+    - name : nginx
+      tags :
+        - nginx
+    - name : wordpress
+      tags :
+        - wordpress

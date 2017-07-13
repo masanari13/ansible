@@ -1,0 +1,6 @@
+---
+- name : dependencies
+  dependencies :
+    - { role : install-httpd }
+    - { role : install-php }
+    - { role : install-mysql }

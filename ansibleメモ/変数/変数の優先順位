@@ -1,0 +1,18 @@
+（高）
+• エクストラ 変数（ コマンド実行時に-eで渡すもの）
+• タスク 変数（ 指定した Task 内でのみ有効 )
+• ブロック 変数（ タスクをまとめた Block 内でのみ有効）
+• Role の vars 内 変数定義ファイル／ include_ vars モジュールで読込んだ変数定義ファイル
+• Play 内 vars_ files ディレクティブで読込んだ変数定義ファイル
+• Play 内 vars_ prompt ディレクティブ を使って入力した変数
+• Play の vars で定義した変数
+• set_ factで指定した値 
+• registerで保存した値
+• HostのFact情報（setupが収集する情報）
+• Playbookディレクトリ上 host_vars内 ホスト変数 ファイル
+• Playbookディレクトリ上 group_vars内 グループ変数 ファイル
+• Inventoryディレクトリ上 host_vars内 ホスト変数 ファイル
+• Inventoryディレクトリ上 group_vars内 グループ変数 ファイル
+• Inventoryファイル（ Dynamic 含む)内で定義された変数
+• Roleのdefaults内のデフォルト変数定義ファイル
+（低）

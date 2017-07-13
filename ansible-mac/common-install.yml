@@ -1,0 +1,12 @@
+---
+- name : Macに入れときたいものinstall
+  hosts: mypc
+  connection : local
+  become : false
+  roles :
+    - name : mamp
+      tags :
+       - mamp
+    - name : mysql
+      tags :
+        - mysql

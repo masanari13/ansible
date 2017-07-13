@@ -1,0 +1,36 @@
+---
+  - name : Playbookチュートリアル
+    hosts : hosts
+    become : true
+    tasks :
+      - name : libselinux-pythonをインストール
+        yum :
+         name : libselinux-python
+         state : present
+      - name : epelリポジトリのインストール
+        yum :
+         name : epel-release
+         state : present
+      - name : Nginxのインストール
+        yum :
+         name : nginx
+         state : present
+      - name : httpdの停止
+        service:
+         name : httpd
+         state : stopped
+      - name : Nginxの起動
+        service :
+         name : nginx
+         state : started
+         enabled : true
+      - name : firewallの停止
+        service :
+         name : firewalld
+         state : stopped
+         enabled : true
+      - name : networkの再起動
+        service :
+         name : network
+         state : restarted
+         enabled : true

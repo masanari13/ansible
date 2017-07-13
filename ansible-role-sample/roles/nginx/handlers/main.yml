@@ -1,0 +1,10 @@
+---
+# handlers file for nginx
+- name : Nginxをリロード
+  service :
+   name : nginx
+   state : reloaded
+- name : networkの再起動
+  service :
+   name : network
+   state : reloaded

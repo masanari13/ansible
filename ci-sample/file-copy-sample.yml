@@ -1,0 +1,10 @@
+---
+  - name : ファイルのコピー
+    hosts : hosts
+    become : true
+    tasks :
+      - name : ansible稼働マシンからのファイルのコピー
+        copy :
+          src : original_file
+          dest : ~/copied_file
+          backup : true
